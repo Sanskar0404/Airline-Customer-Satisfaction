@@ -1,0 +1,25 @@
+body {
+    background-image: url('https://wallpaperset.com/w/full/2/8/4/217537.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: rgb(0, 0, 0); /* Adjust text color for readability */
+}
+
+
+/* Button styles remain the same */
+#g, #abc, #sub {
+    width: 133px;
+    height: 33px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#g:hover {
+    background-color: blue;
+}
+
+#abc:hover {
+    background-color: rgb(11, 5, 5);
+}

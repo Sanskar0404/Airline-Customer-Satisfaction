@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Satisfaction</title>
+    <link rel="stylesheet" href="/staticfiles/style.css">
+</head>
+<body>
+    <form action="{{url_for('predict')}}" method="post">
+
+        <input type="text" name="Age" placeholder="Age">
+        <input type="text" name="Flight Distance" placeholder="Flight Distance">
+        <input type="text" name="Seat_Comfort" placeholder="Seat Comfort">
+        <input type="text" name="Departure/Arrival time convenient" placeholder="Departure/Arrival Convenience">
+        <input type="text" name="Food and drink" placeholder="Food and Drink">
+        <input type="text" name="Gate location" placeholder="Gate Location">
+        <input type="text" name="Inflight wifi service" placeholder="Inflight Wifi Service">
+        <input type="text" name="Inflight entertainment" placeholder="Inflight Entertainment">
+        <input type="text" name="Online support" placeholder="Online Support">
+        <input type="text" name="Ease of Online booking" placeholder="Ease of Online Booking">
+        <input type="text" name="On-board service" placeholder="On-board Service">
+        <input type="text" name="Leg room service" placeholder="Leg Room Service">
+        <input type="text" name="Baggage handling" placeholder="Baggage Handling">
+        <input type="text" name="Checkin service" placeholder="Checkin Service">
+        <input type="text" name="Cleanliness" placeholder="Cleanliness">
+        <input type="text" name="Online_boarding" placeholder="Online Boarding">
+        <input type="text" name="Departure_Delay_Minutes" placeholder="Departure Delay Minutes">
+        <input type="text" name="Arrival_Delay_Minutes" placeholder="Arrival Delay Minutes">
+
+        <h3>Gender</h3>
+        <select name="Gender">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+        </select>
+
+        <h3>Customer Type</h3>
+        <select name="Customer Type">
+            <option value="0">Loyal Customer</option>
+            <option value="1">Disloyal Customer</option>
+        </select>
+
+        <h3>Type of Travel</h3>
+        <select name="Type of Travel">
+            <option value="0">Business Travel</option>
+            <option value="1">Personal Travel</option>
+        </select>
+
+        <h3>Class</h3>
+        <select name="Class">
+            <option value="0">Eco</option>
+            <option value="1">Eco Plus</option>
+            <option value="2">Business</option>
+        </select>
+
+        <br><br>
+        <button type="submit">Prediction</button>
+    </form>
+
+    <br><br>
+    {{prediction_text}}
+</body>
+</html>
